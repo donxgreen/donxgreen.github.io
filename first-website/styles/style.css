@@ -1,49 +1,87 @@
-p {
-  color: red;
-  width: 500px;
-  border: 1px solid black;
-}
-
-p,
-li,
-h1 {
-  color: red;
-}
-
+/* General Styles */
 html {
-  font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
-  font-family: sans-serif, sans-serif; /* this should be the rest of the output you got from Google Fonts */
-}
-
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539f;
-  text-shadow: 3px 3px 1px black;
-}
-
-
-p,
-li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-html {
-  background-color: #00539f;
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
 body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #ff9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 5px solid #8b0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Text Styling */
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #8b0000;
+    text-shadow: 2px 2px 1px black;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* Image Styling */
 img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumb {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumb:hover {
+    border-color: #8b0000;
+}
+
+/* Button Styling */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #600000;
+}
+
+/* Link Styling */
+a {
+    display: block;
+    margin-top: 10px;
+    color: #8b0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
