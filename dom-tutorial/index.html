@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Scripting Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .new-paragraph {
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Scripting Example</h1>
+    <p id="paragraph">This is a simple paragraph. Click the button to change its content and style!</p>
+    
+    <button id="changeButton">Change Text and Style</button>
+    <button id="addParagraphButton">Add a New Paragraph</button>
+    <button id="removeParagraphButton">Remove the Paragraph</button>
+    
+    <div id="newParagraphContainer"></div>
+
+    <script>
+        // Accessing elements
+        const paragraph = document.getElementById('paragraph');
+        const changeButton = document.getElementById('changeButton');
+        const addParagraphButton = document.getElementById('addParagraphButton');
+        const removeParagraphButton = document.getElementById('removeParagraphButton');
+        const newParagraphContainer = document.getElementById('newParagraphContainer');
+
+        // Event listener to change text and style of the paragraph
+        changeButton.addEventListener('click', function() {
+            paragraph.textContent = 'The paragraph has been updated!';
+            paragraph.classList.add('highlight');
+        });
+
+        // Event listener to add a new paragraph
+        addParagraphButton.addEventListener('click', function() {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph added dynamically!';
+            newParagraph.classList.add('new-paragraph');
+            newParagraphContainer.appendChild(newParagraph);
+        });
+
+        // Event listener to remove the paragraph
+        removeParagraphButton.addEventListener('click', function() {
+            if (newParagraphContainer.firstChild) {
+                newParagraphContainer.removeChild(newParagraphContainer.firstChild);
+            } else {
+                alert('No new paragraph to remove!');
+            }
+        });
+    </script>
+</body>
+</html>
